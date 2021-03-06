@@ -17,6 +17,7 @@ class Book
   def brand=(brand)
     @brand = brand
     BRANDS << brand
+  end
 
   def turn_page
     puts "Flipping the page...wow, you read fast!"
