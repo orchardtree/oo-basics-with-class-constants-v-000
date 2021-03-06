@@ -6,12 +6,16 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    if BRANDS.find{|existing_brand| existing_brand == brand} == false
+      BRANDS << brand
+    end
   end
   
   def brand=(brand)
     @brand = brand
-    BRANDS << brand
+    if BRANDS.find{|existing_brand| existing_brand == brand} == false
+      BRANDS << brand
+    end
   end
 
   def cobble
